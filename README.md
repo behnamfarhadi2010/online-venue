@@ -1,4 +1,4 @@
-# 🏠 Online Venue Booking
+#  Online Venue Booking
 
 ## About Us
 Welcome to our online venue booking platform—your go-to solution for finding the perfect space for unforgettable events!
@@ -10,29 +10,29 @@ Our Mission:
 To simplify venue booking with a seamless, user-friendly experience—so you can focus on creating memories, not logistics. Future phases will expand to weddings, corporate events, and more!
 A simple, user-friendly web application for discovering and submitting venues for booking — perfect for events, parties, meetings, and more!
 
-🚀 **Live Demo**: [Visit Website](https://behnamfarhadi2010.github.io/online-venue/index.html)
+**Live Demo**: [Visit Website](https://behnamfarhadi2010.github.io/online-venue/index.html)
 
 ---
 
-## 📌 Features
+##  Features
 
-- 🔍 Browse available spaces
-- ➕ Submit your own property for listing
-- 🧾 Login / Signup functionality
-- 📦 Dashboard for users with:
+-  Browse available spaces
+-  Submit your own property for listing
+-  Login / Signup functionality
+-  Dashboard for users with:
   - Profile
   - Listings
   - Favorites
   - Reservations & Bookings
   - Inbox & Invoices
-- 📱 Responsive design for all devices
+-  Responsive design for all devices
 
 ---
 
 
 ---
 
-## 🧠 Technologies Used
+##  Technologies Used
 
 - HTML5 + CSS3
 - JavaScript (Vanilla)
@@ -41,7 +41,7 @@ A simple, user-friendly web application for discovering and submitting venues fo
 
 ---
 
-## 🛠️ How to Use
+##  How to Use
 
 1. Clone or fork this repository  
 
@@ -58,7 +58,7 @@ git clone https://github.com/behnamfarhadi2010/online-venue.git
 
 ---
 
-## 💡 Future Improvements
+##  Future Improvements
 
 - Backend integration for real user authentication
 - Database for dynamic listings
@@ -67,9 +67,9 @@ git clone https://github.com/behnamfarhadi2010/online-venue.git
 
 ---
 
-## 📬 Contact
+##  Contact
 
 Feel free to reach out!
 
 **Behnam Farhadi**  
-📧 [LinkedIn](https://www.linkedin.com/in/farhadi-behnam/) 
+ [LinkedIn](https://www.linkedin.com/in/farhadi-behnam/) 
