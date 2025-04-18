@@ -15,13 +15,16 @@ document.addEventListener("DOMContentLoaded", function () {
           <button class="login" id="logbtn" type="button" onclick="showLoginDialog(true, 'signup')">
             Login / Sign Up
           </button>
-          <span id="greeting" style="display: none; color: black; font-weight: bold;"></span>
         </div>
           <button id="submitPropertyBtn" style="background-color: #57bec3; display: none;" class="btn btn-primary">
             <a href="add-listing.html">Submit Property</a>
           </button>
-</div>
+          <button id="logoutBtn" style="background-color:rgb(229, 17, 17); display: none;" class="btn btn-primary">
+            <a href="add-listing.html">Log Out</a>
+          </button>
         </div>
+        </nav>
+      
       </nav>
       <h1 class="main-name main-name-large">Online Venue Booking</h1>
     </header>

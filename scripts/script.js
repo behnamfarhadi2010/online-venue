@@ -22,19 +22,20 @@ function updateUI() {
   const currentUser = JSON.parse(localStorage.getItem("currentUser"));
   const submitBtn = document.getElementById("submitBtn");
   const loginBtn = document.getElementById("logbtn"); // Get the login button
-  const greeting = document.getElementById("greeting");
+  const logoutBtn = document.getElementById("logoutBtn");
 
   if (activeUser) {
     if (submitBtn) submitBtn.style.display = "block";
-    if (loginBtn) loginBtn.style.display = "none";  // 🔥 Hides the login button
-    if (greeting) {
-      greeting.style.display = "inline-block";
-      greeting.textContent = ` ${currentUser.name || currentUser.email || "User"} `;
+    if (loginBtn) loginBtn.style.display = "none";  //  Hides the login button
+    if (logoutBtn) {
+      logoutBtn.style.display = "inline-block";
+      logoutBtn.textContent = `logout ${currentUser.name || currentUser.email || "User"} `;
+      logoutBtn.addEventListener("click", logout);
     }
   } else {
     if (submitBtn) submitBtn.style.display = "none";
     if (loginBtn) loginBtn.style.display = "inline-block";
-    if (greeting) greeting.style.display = "none";
+   // if (logoutBtn) greeting.style.display = "none";
   }
 }
 
@@ -111,6 +112,8 @@ const handleFormSubmit = (e) => {
     country: document.getElementById("country").value,
     password: document.getElementById("password").value,
     checkbox: document.getElementById("checkbox").checked,
+    // TODO: only add properties field for vendors
+    properties: [],
   };
 
   console.log("User Input:", userData);
@@ -332,3 +335,73 @@ document.addEventListener("DOMContentLoaded", () => {
   populateCountrySelect("country", countries);
   logStoredUsers();
 });
+
+//Logout
+function logout() {
+  localStorage.removeItem("currentUser");
+  activeUser = null; // Clear the active user
+  updateUI(); // Update the UI to reflect the logout
+  alert("You have logged out successfully.");
+  window.location.href = "index.html"; // Redirect to the home page
+}
+document.getElementById("logoutBtn").addEventListener("click", logout);
+
+
+// google map api
+
+let map;
+let marker;
+let autocomplete;
+
+function initMap() {
+  const defaultLocation = { lat: 47.5615, lng: -52.7126 }; // Example: St. John's
+
+  map = new google.maps.Map(document.getElementById("map"), {
+    center: defaultLocation,
+    zoom: 12,
+  });
+
+  // Set up Autocomplete
+  const input = document.getElementById("locationInput");
+  autocomplete = new google.maps.places.Autocomplete(input);
+  autocomplete.bindTo("bounds", map);
+
+  // When a user selects a location
+  autocomplete.addListener("place_changed", () => {
+    const place = autocomplete.getPlace();
+
+    if (!place.geometry) {
+      alert("No details available for that location.");
+      return;
+    }
+
+    if (marker) marker.setMap(null);
+
+    // Create Marker
+    marker = new google.maps.Marker({
+      map,
+      position: place.geometry.location,
+      draggable: true,
+      title: "Drag to adjust",
+    });
+
+    map.setCenter(place.geometry.location);
+    map.setZoom(15);
+
+    // Optional: show coordinates
+    console.log("Business Location Coordinates:", place.geometry.location.toJSON());
+  });
+
+  // Allow clicking on map to set location
+  map.addListener("click", (event) => {
+    if (marker) marker.setMap(null);
+
+    marker = new google.maps.Marker({
+      position: event.latLng,
+      map: map,
+      draggable: true,
+    });
+
+    console.log("Manual Location Selected:", event.latLng.toJSON());
+  });
+}

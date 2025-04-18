@@ -61,14 +61,38 @@ PreviousBtn.addEventListener("click", () => {
   updateFormVisibility(); // Update form and progress bar
 });
 
+///
 function submitForm() {
   formData = {
     ...formData,
     availabilityDates: window.availabilityDates || [],
   };
+  
+  let updatedProperties = activeUser.properties || [];
 
-  console.log(formData);
+  //let updatedProperties = activeUser.properties;
+  updatedProperties.push(formData);
+
+  const updatedUser = {
+    ...activeUser,
+    properties: updatedProperties,
+  };
+
+  // retrieve all users from storage
+  const users = JSON.parse(localStorage.getItem("users")) || [];
+
+  // filter out the active user (because it doesn't have the new property)
+  let otherUsers = users.filter((user) => user.email !== updatedUser.email);
+
+  // add the active user back in (with the new property)
+  otherUsers.push(updatedUser);
+
+  // save all other users + our newly updated user with the new property to local storage
+  localStorage.setItem("users", JSON.stringify(otherUsers));
+  window.onUserLogin(updatedUser);
+  alert("Property saved successfully!");
 }
+/////
 
 const { Calendar } = window.VanillaCalendarPro;
 

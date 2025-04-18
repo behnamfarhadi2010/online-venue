@@ -3,111 +3,154 @@
   <head>
     <title>Home</title>
     <link rel="stylesheet" type="text/css" href="styles/style.css" />
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
   </head>
   <body id="mainbody">
     <div id="header-container"></div>
-    <div class="flex-group">
 
-<!-- Dialog for Sign Up and Sign In -->
-<dialog id="lgn">
-  <div class="wrapper">
-    <!-- Sign Up Form -->
-    <div id="signupForm">
-      <h2>Sign Up</h2>
-      <form id="userForm">
-        <input type="email" id="email" placeholder="Email" required />
-        <input type="password" id="password" placeholder="Password" required />
-        <input type="text" id="name" placeholder="Name" required />
-        <label for="country">Country</label>
-        <select id="country" name="country" class="form-control" required>
-          <option value="" disabled selected>Select your country</option>
-        </select>
-        <div >
-        <input type="checkbox" id="checkbox" />
-        <label for="checkbox">I'm a Vendor</label>
+    <!-- Dialog for Sign Up and Sign In -->
+    <dialog id="lgn">
+      <div class="wrapper">
+        <!-- Sign Up Form -->
+        <div id="signupForm">
+          <h2>Sign Up</h2>
+          <form id="userForm">
+            <input type="email" id="email" placeholder="Email" required />
+            <input
+              type="password"
+              id="password"
+              placeholder="Password"
+              required
+            />
+            <input type="text" id="name" placeholder="Name" required />
+            <label for="country">Country</label>
+            <select id="country" name="country" class="form-control" required>
+              <option value="" disabled selected>Select your country</option>
+            </select>
+            <div>
+              <input type="checkbox" id="checkbox" />
+              <label for="checkbox">I'm a Vendor</label>
+            </div>
+            <div>
+              <input type="checkbox" id="terms" />
+
+              <label for="terms"
+                >I agree with <a href="about.html">terms & conditions</a></label
+              >
+            </div>
+            <button type="submit">Sign Up</button>
+            <button type="button" onclick="showLoginDialog(false)">
+              Cancel
+            </button>
+          </form>
+          <p>
+            Already have an account?
+            <a href="javascript:showLoginDialog(true, 'signin')">Log in</a>
+          </p>
         </div>
-        <div>
-        <input type="checkbox" id="terms" />
-        
-        <label for="terms">I agree with <a href="about.html">terms & conditions</a></label>
+
+        <!-- Sign In Form -->
+        <div id="signinForm" style="display: none">
+          <h2>Sign In</h2>
+          <form id="loginForm">
+            <input type="email" id="loginEmail" placeholder="Email" required />
+            <input
+              type="password"
+              id="loginPassword"
+              placeholder="Password"
+              required
+            />
+            <button type="submit">Sign In</button>
+            <button type="button" onclick="showLoginDialog(false)">
+              Cancel
+            </button>
+          </form>
+          <p>
+            Don't have an account?
+            <a href="javascript:showLoginDialog(true, 'signup')">Sign up</a>
+          </p>
         </div>
-        <button type="submit">Sign Up</button>
-        <button type="button" onclick="showLoginDialog(false)">Cancel</button>
-      </form>
-      <p>Already have an account? <a href="javascript:showLoginDialog(true, 'signin')">Log in</a></p>
-    </div>
+      </div>
+    </dialog>
+    <iframe
+      src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d8525.575810167062!2d-52.74838014024839!3d47.554297392385145!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4b0ca38e6b0aa261%3A0x9e1fd4001f12261f!2sSt.%20John&#39;s%2C%20NL!5e0!3m2!1sen!2sca!4v1743002182388!5m2!1sen!2sca"
+      width="100%"
+      height="450"
+      style="border: 0"
+      allowfullscreen=""
+      loading="lazy"
+      referrerpolicy="no-referrer-when-downgrade"
+    ></iframe>
 
-    <!-- Sign In Form -->
-    <div id="signinForm" style="display: none;">
-      <h2>Sign In</h2>
-      <form id="loginForm">
-        <input type="email" id="loginEmail" placeholder="Email" required />
-        <input type="password" id="loginPassword" placeholder="Password" required />
-        <button type="submit">Sign In</button>
-        <button type="button" onclick="showLoginDialog(false)">Cancel</button>
-      </form>
-      <p>Don't have an account? <a href="javascript:showLoginDialog(true, 'signup')">Sign up</a></p>
-    </div>
-  </div>
-</dialog>
-      <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d8525.575810167062!2d-52.74838014024839!3d47.554297392385145!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4b0ca38e6b0aa261%3A0x9e1fd4001f12261f!2sSt.%20John&#39;s%2C%20NL!5e0!3m2!1sen!2sca!4v1743002182388!5m2!1sen!2sca" width="100%" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>      
- 
-<div class="contactbox">
-       
-<div class="contactbox">
-<div class="box-box1">
-  <h2>Contact Us</h2>
-  <p> Venue Rentals </p>
-  <i class="fa fa-phone" > <a href="tel:+1-709-341-7330">+1-709-341-7330</a> </i>
-  
-  <i class="fa fa-mobile"> <a href="tel:+1-709-341-7330">+1-709-341-7330</a> </i>
-  
-  
-  <i class="fa fa-envelope"><a href="mailto:office@onlinevenuebooking.com" > office@onlinevenuebooking.com</a></i>
+    <div class="contactbox">
+      <div class="contactbox">
+        <div class="box-box1">
+          <h2>Contact Us</h2>
+          <p>Venue Rentals</p>
+          <i class="fa fa-phone">
+            <a href="tel:+1-709-341-7330">+1-709-341-7330</a>
+          </i>
 
-  <i class="fa fa-map-marker"> <a href="https://maps.app.goo.gl/oDMj4hVVU6vNWMw28" target="_blank"> St. John's, NL A1C 5S7 </a></i>
+          <i class="fa fa-mobile">
+            <a href="tel:+1-709-341-7330">+1-709-341-7330</a>
+          </i>
 
+          <i class="fa fa-envelope"
+            ><a href="mailto:office@onlinevenuebooking.com">
+              office@onlinevenuebooking.com</a
+            ></i
+          >
 
-</div> 
-<div class="box-box2">
-  <div class="box-box2-1">
-    <input type="text" id="name" placeholder="FullName" required />
-    <input type="email" id="email" placeholder="Email" required />
-    <input type="text" id="website" placeholder="Website" required />
-    
-  </div>
-  <div class="box-box2-2">
-    <textarea id="message" placeholder="Message" required></textarea>
-    <button id="submit" type="submit">Send</button>
-
-  </div>
-</div> 
-</div>
-</div>  
-      <footer>
-        <div class="footer">
-          <div class="flex-footer">  
-            <a href="about.html">About</a>
-            <a href="contact.html">Contact</a>
-            <a href="find-a-space.html">Find Space</a>
-            <a href="terms.html">Terms</a>
-            <a href="privacy.html">Privacy</a>
-            <a href="javascript:showLoginDialog(true, 'signup')">Sign Up</a>
-            <a href="javascript:showLoginDialog(true, 'signin')">Sign In</a>
+          <i class="fa fa-map-marker">
+            <a href="https://maps.app.goo.gl/oDMj4hVVU6vNWMw28" target="_blank">
+              St. John's, NL A1C 5S7
+            </a></i
+          >
+        </div>
+        <div class="box-box2">
+          <div class="box-box2-1">
+            <input type="text" id="name" placeholder="FullName" required />
+            <input type="email" id="email" placeholder="Email" required />
+            <input type="text" id="website" placeholder="Website" required />
           </div>
-          <br>
-          <div class="flex-footer">
-            <a href="https://www.facebook.com/"><img src="img/facebook.svg" width="25px" alt="facebook"></a>
-            <a href="https://www.instagram.com/"><img src="img/instagram.svg" width="25px" alt="instagram"></a>
-            <a href="https://www.twitter.com/"><img src="img/twitter.svg" width="25px" alt="twitter"></a>
+          <div class="box-box2-2">
+            <textarea id="message" placeholder="Message" required></textarea>
+            <button id="submit" type="submit">Send</button>
           </div>
-          <br>
-          <p>&copy; Copyrights are deserved for Online venue Booking 2025</p> 
-
         </div>
-      </footer>
+      </div>
+    </div>
+    <footer>
+      <div class="footer">
+        <div class="flex-footer">
+          <a href="about.html">About</a>
+          <a href="contact.html">Contact</a>
+          <a href="find-a-space.html">Find Space</a>
+          <a href="terms.html">Terms</a>
+          <a href="privacy.html">Privacy</a>
+          <a href="javascript:showLoginDialog(true, 'signup')">Sign Up</a>
+          <a href="javascript:showLoginDialog(true, 'signin')">Sign In</a>
+        </div>
+        <br />
+        <div class="flex-footer">
+          <a href="https://www.facebook.com/"
+            ><img src="img/facebook.svg" width="25px" alt="facebook"
+          /></a>
+          <a href="https://www.instagram.com/"
+            ><img src="img/instagram.svg" width="25px" alt="instagram"
+          /></a>
+          <a href="https://www.twitter.com/"
+            ><img src="img/twitter.svg" width="25px" alt="twitter"
+          /></a>
+        </div>
+        <br />
+        <p>&copy; Copyrights are deserved for Online venue Booking 2025</p>
+      </div>
+    </footer>
     <script src="scripts/header.js"></script>
     <script src="scripts/script.js"></script>
-</body>
+  </body>
 </html>

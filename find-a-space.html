@@ -5,78 +5,107 @@
     <link rel="stylesheet" type="text/css" href="styles/style.css" />
   </head>
   <body id="mainbody">
-    <div id="header-container"></div>   
-    
+    <div id="header-container"></div>
+
     <!-- Dialog for Sign Up and Sign In -->
     <dialog id="lgn">
-  <div class="wrapper">
-    <!-- Sign Up Form -->
-    <div id="signupForm">
-      <h2>Sign Up</h2>
-      <form id="userForm">
-        <input type="email" id="email" placeholder="Email" required />
-        <input type="password" id="password" placeholder="Password" required />
-        <input type="text" id="name" placeholder="Name" required />
-        <label for="country">Country</label>
-        <select id="country" name="country" class="form-control" required>
-          <option value="" disabled selected>Select your country</option>
-        </select>
-        <div >
-        <input type="checkbox" id="checkbox" />
-        <label for="checkbox">I'm a Vendor</label>
-        </div>
-        <div>
-        <input type="checkbox" id="terms" />
-        
-        <label for="terms">I agree with <a href="about.html">terms & conditions</a></label>
-        </div>
-        <button type="submit">Sign Up</button>
-        <button type="button" onclick="showLoginDialog(false)">Cancel</button>
-      </form>
-      <p>Already have an account? <a href="javascript:showLoginDialog(true, 'signin')">Log in</a></p>
-    </div>
+      <div class="wrapper">
+        <!-- Sign Up Form -->
+        <div id="signupForm">
+          <h2>Sign Up</h2>
+          <form id="userForm">
+            <input type="email" id="email" placeholder="Email" required />
+            <input
+              type="password"
+              id="password"
+              placeholder="Password"
+              required
+            />
+            <input type="text" id="name" placeholder="Name" required />
+            <label for="country">Country</label>
+            <select id="country" name="country" class="form-control" required>
+              <option value="" disabled selected>Select your country</option>
+            </select>
+            <div>
+              <input type="checkbox" id="checkbox" />
+              <label for="checkbox">I'm a Vendor</label>
+            </div>
+            <div>
+              <input type="checkbox" id="terms" />
 
-    <!-- Sign In Form -->
-    <div id="signinForm" style="display: none;">
-      <h2>Sign In</h2>
-      <form id="loginForm">
-        <input type="email" id="loginEmail" placeholder="Email" required />
-        <input type="password" id="loginPassword" placeholder="Password" required />
-        <button type="submit">Sign In</button>
-        <button type="button" onclick="showLoginDialog(false)">Cancel</button>
-      </form>
-      <p>Don't have an account? <a href="javascript:showLoginDialog(true, 'signup')">Sign up</a></p>
-    </div>
-  </div>
-</dialog>
+              <label for="terms"
+                >I agree with <a href="about.html">terms & conditions</a></label
+              >
+            </div>
+            <button type="submit">Sign Up</button>
+            <button type="button" onclick="showLoginDialog(false)">
+              Cancel
+            </button>
+          </form>
+          <p>
+            Already have an account?
+            <a href="javascript:showLoginDialog(true, 'signin')">Log in</a>
+          </p>
+        </div>
+
+        <!-- Sign In Form -->
+        <div id="signinForm" style="display: none">
+          <h2>Sign In</h2>
+          <form id="loginForm">
+            <input type="email" id="loginEmail" placeholder="Email" required />
+            <input
+              type="password"
+              id="loginPassword"
+              placeholder="Password"
+              required
+            />
+            <button type="submit">Sign In</button>
+            <button type="button" onclick="showLoginDialog(false)">
+              Cancel
+            </button>
+          </form>
+          <p>
+            Don't have an account?
+            <a href="javascript:showLoginDialog(true, 'signup')">Sign up</a>
+          </p>
+        </div>
+      </div>
+    </dialog>
 
     <script src="scripts/header.js"></script>
     <script src="scripts/script.js"></script>
-    <script src="https://code.jquery.com/jquery-3.3.1.min.js"
+    <script
+      src="https://code.jquery.com/jquery-3.3.1.min.js"
       integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
-      crossorigin="anonymous"></script>
+      crossorigin="anonymous"
+    ></script>
 
-      <footer>
-        <div class="footer">
-          <div class="flex-footer">  
-            <a href="about.html">About</a>
-            <a href="contact.html">Contact</a>
-            <a href="find-a-space.html">Find Space</a>
-            <a href="terms.html">Terms</a>
-            <a href="privacy.html">Privacy</a>
-            <a href="javascript:showLoginDialog(true, 'signup')">Sign Up</a>
-            <a href="javascript:showLoginDialog(true, 'signin')">Sign In</a>
-          </div>
-          <br>
-          <div class="flex-footer">
-            <a href="https://www.facebook.com/"><img src="img/facebook.svg" width="25px" alt="facebook"></a>
-            <a href="https://www.instagram.com/"><img src="img/instagram.svg" width="25px" alt="instagram"></a>
-            <a href="https://www.twitter.com/"><img src="img/twitter.svg" width="25px" alt="twitter"></a>
-          </div>
-          <br>
-          <p>&copy; Copyrights are reserved for Online venue Booking 2025</p> 
-
+    <footer>
+      <div class="footer">
+        <div class="flex-footer">
+          <a href="about.html">About</a>
+          <a href="contact.html">Contact</a>
+          <a href="find-a-space.html">Find Space</a>
+          <a href="terms.html">Terms</a>
+          <a href="privacy.html">Privacy</a>
+          <a href="javascript:showLoginDialog(true, 'signup')">Sign Up</a>
+          <a href="javascript:showLoginDialog(true, 'signin')">Sign In</a>
         </div>
-      </footer>
+        <br />
+        <div class="flex-footer">
+          <a href="https://www.facebook.com/"
+            ><img src="img/facebook.svg" width="25px" alt="facebook"
+          /></a>
+          <a href="https://www.instagram.com/"
+            ><img src="img/instagram.svg" width="25px" alt="instagram"
+          /></a>
+          <a href="https://www.twitter.com/"
+            ><img src="img/twitter.svg" width="25px" alt="twitter"
+          /></a>
+        </div>
+        <br />
+        <p>&copy; Copyrights are reserved for Online venue Booking 2025</p>
+      </div>
+    </footer>
   </body>
 </html>
