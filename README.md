@@ -1,4 +1,8 @@
+<<<<<<< HEAD
 # Online Venue Booking
+=======
+#  Online Venue Booking
+>>>>>>> 177eb83a5c99008bc603784e6644da8917fd2de0
 
 ## About Us
 
@@ -15,6 +19,7 @@ A simple, user-friendly web application for discovering and submitting venues fo
 
 ---
 
+<<<<<<< HEAD
 ## Features
 
 - Browse available spaces
@@ -27,12 +32,30 @@ A simple, user-friendly web application for discovering and submitting venues fo
 - Reservations & Bookings
 - Inbox & Invoices
 - Responsive design for all devices
+=======
+##  Features
+
+-  Browse available spaces
+-  Submit your own property for listing
+-  Login / Signup functionality
+-  Dashboard for users with:
+  - Profile
+  - Listings
+  - Favorites
+  - Reservations & Bookings
+  - Inbox & Invoices
+-  Responsive design for all devices
+>>>>>>> 177eb83a5c99008bc603784e6644da8917fd2de0
 
 ---
 
 ---
 
+<<<<<<< HEAD
 ## Technologies Used
+=======
+##  Technologies Used
+>>>>>>> 177eb83a5c99008bc603784e6644da8917fd2de0
 
 - HTML5 + CSS3
 - JavaScript (Vanilla)
@@ -41,7 +64,7 @@ A simple, user-friendly web application for discovering and submitting venues fo
 
 ---
 
-## 🛠️ How to Use
+##  How to Use
 
 1. Clone or fork this repository
 
@@ -58,7 +81,11 @@ git clone https://github.com/behnamfarhadi2010/online-venue.git
 
 ---
 
+<<<<<<< HEAD
 ## Future Improvements
+=======
+##  Future Improvements
+>>>>>>> 177eb83a5c99008bc603784e6644da8917fd2de0
 
 - Backend integration for real user authentication
 - Database for dynamic listings
@@ -67,9 +94,17 @@ git clone https://github.com/behnamfarhadi2010/online-venue.git
 
 ---
 
+<<<<<<< HEAD
 ## Contact
+=======
+##  Contact
+>>>>>>> 177eb83a5c99008bc603784e6644da8917fd2de0
 
 Feel free to reach out!
 
 **Behnam Farhadi**  
+<<<<<<< HEAD
  [LinkedIn](https://www.linkedin.com/in/farhadi-behnam/)
+=======
+ [LinkedIn](https://www.linkedin.com/in/farhadi-behnam/) 
+>>>>>>> 177eb83a5c99008bc603784e6644da8917fd2de0
